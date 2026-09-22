@@ -6,7 +6,7 @@ Uptime Kuma runs on the existing homelab mini PC.
 
 Address:
 
-`http://192.168.1.112:3001`
+`http://192.0.2.20:3001`
 
 It uses persistent Docker storage and embedded MariaDB.
 
@@ -14,13 +14,13 @@ It uses persistent Docker storage and embedded MariaDB.
 
 ### Open WebUI
 
-`http://192.168.1.114:3000`
+`http://192.0.2.10:3000`
 
 Purpose: verify the AI interface is reachable.
 
 ### Ollama
 
-`http://192.168.1.114:11434/api/tags`
+`http://192.0.2.10:11434/api/tags`
 
 Purpose: verify the Ollama API is reachable.
 
@@ -28,7 +28,7 @@ Purpose: verify the Ollama API is reachable.
 
 Ping:
 
-`192.168.1.114`
+`192.0.2.10`
 
 Purpose: verify network reachability.
 
