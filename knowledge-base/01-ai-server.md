@@ -2,9 +2,9 @@
 
 Hostname: `Nexus-Ai`
 
-LAN IP: `192.168.1.114`
+LAN IP: `192.0.2.10`
 
-Tailscale IP: `100.117.255.81`
+Tailscale IP: `198.51.100.10`
 
 GPU: NVIDIA RTX 4070, 12 GB VRAM
 
