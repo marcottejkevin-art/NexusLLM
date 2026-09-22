@@ -6,7 +6,7 @@ Portainer remains on the existing homelab mini PC.
 
 Address:
 
-`https://192.168.1.112:9443`
+`https://192.0.2.20:9443`
 
 The AI server does not run a second Portainer instance.
 
@@ -26,11 +26,11 @@ Port:
 
 The existing Portainer connects to:
 
-`tcp://192.168.1.114:9001`
+`tcp://192.0.2.10:9001`
 
 ## Firewall
 
-Only the Portainer server at `192.168.1.112` is allowed to reach TCP/9001.
+Only the Portainer server at `192.0.2.20` is allowed to reach TCP/9001.
 
 Check:
 
@@ -49,7 +49,7 @@ Check enablement:
 If Portainer reports the AI server as disconnected:
 
 1. Check `portainer_agent`.
-2. Verify TCP/9001 from `192.168.1.112`.
+2. Verify TCP/9001 from `192.0.2.20`.
 3. Inspect `DOCKER-USER`.
 4. Check `portainer-firewall.service`.
 5. Confirm Docker is running.
