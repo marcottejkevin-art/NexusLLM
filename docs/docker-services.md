@@ -38,7 +38,7 @@ Open WebUI connects to:
 
 The external PWA manifest is supplied by:
 
-`http://192.168.1.114:8081/manifest.webmanifest`
+`http://192.0.2.10:8081/manifest.webmanifest`
 
 ### Nexus Proxy
 
