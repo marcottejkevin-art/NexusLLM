@@ -3,8 +3,8 @@
 ## Identity
 
 - Hostname: `Nexus-Ai`
-- LAN IP: `192.168.1.114`
-- Tailscale IP: `100.117.255.81`
+- LAN IP: `192.0.2.10`
+- Tailscale IP: `198.51.100.10`
 
 ## Hardware
 
@@ -41,6 +41,6 @@ Tailscale is installed and configured.
 
 Open WebUI is reachable remotely through:
 
-`http://100.117.255.81:3000`
+`http://198.51.100.10:3000`
 
 No public Internet exposure is intended.
