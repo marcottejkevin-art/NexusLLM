@@ -4,7 +4,7 @@
 
 The Nexus AI Open WebUI instance is available at:
 
-`http://100.117.255.81:3000`
+`http://198.51.100.10:3000`
 
 The address is reached over Tailscale.
 
