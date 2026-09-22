@@ -32,8 +32,8 @@
 | Component | Configuration |
 |---|---|
 | Hostname | `Nexus-Ai` |
-| LAN IP | `192.168.1.114` |
-| Tailscale IP | `100.117.255.81` |
+| LAN IP | `192.0.2.10` |
+| Tailscale IP | `198.51.100.10` |
 | GPU | NVIDIA RTX 4070 |
 | VRAM | 12 GB |
 | RAM | 32 GB DDR5 |
@@ -54,7 +54,7 @@
 iPhone / LAN
     │
     ▼
-Nexus-Ai 192.168.1.114
+Nexus-Ai 192.0.2.10
     │
     ├── :3000 → nexus-proxy → Open WebUI :8080
     │                              │
@@ -66,7 +66,7 @@ Nexus-Ai 192.168.1.114
     │
     └── :8081 → nexus-pwa → manifest + Nexus icon
 
-Existing Mini PC 192.168.1.112
+Existing Mini PC 192.0.2.20
     ├── Portainer :9443
     └── Uptime Kuma :3001
 ```
@@ -141,7 +141,7 @@ RAG was tested successfully for hardware lookups and multi-document troubleshoot
 
 # 📱 iPhone Nexus AI PWA
 
-**URL:** `http://100.117.255.81:3000`
+**URL:** `http://198.51.100.10:3000`
 
 Install from Safari with **Share → Add to Home Screen**.
 
@@ -163,12 +163,12 @@ Nexus therefore uses Nginx on host port `3000` to:
 
 | Service | Address | Purpose |
 |---|---|---|
-| Nexus Proxy | `192.168.1.114:3000` | Open WebUI entry point + Apple icon |
+| Nexus Proxy | `192.0.2.10:3000` | Open WebUI entry point + Apple icon |
 | Open WebUI | internal `:8080` | AI interface |
-| Ollama | `192.168.1.114:11434` | LLM API |
-| Nexus PWA | `192.168.1.114:8081` | Manifest/icon |
-| Portainer | `https://192.168.1.112:9443` | Docker management |
-| Uptime Kuma | `http://192.168.1.112:3001` | Monitoring |
+| Ollama | `192.0.2.10:11434` | LLM API |
+| Nexus PWA | `192.0.2.10:8081` | Manifest/icon |
+| Portainer | `https://192.0.2.20:9443` | Docker management |
+| Uptime Kuma | `http://192.0.2.20:3001` | Monitoring |
 
 Persistent volumes:
 
@@ -185,11 +185,11 @@ UFW:
 Default incoming: deny
 Default outgoing: allow
 Default routed: deny
-LAN 192.168.1.0/24: allow
+LAN 192.0.2.0/24: allow
 Tailscale interface: allow
 ```
 
-Portainer Agent TCP/9001 is restricted to `192.168.1.112` through Docker's `DOCKER-USER` chain.
+Portainer Agent TCP/9001 is restricted to `192.0.2.20` through Docker's `DOCKER-USER` chain.
 
 Rules are persisted by:
 
@@ -203,13 +203,13 @@ Remote access uses Tailscale. No public Internet exposure is intended.
 
 # 📊 Monitoring
 
-Uptime Kuma runs on `192.168.1.112:3001`.
+Uptime Kuma runs on `192.0.2.20:3001`.
 
 Monitors:
 
-- Open WebUI: `http://192.168.1.114:3000`
-- Ollama: `http://192.168.1.114:11434/api/tags`
-- Nexus-Ai: ping `192.168.1.114`
+- Open WebUI: `http://192.0.2.10:3000`
+- Ollama: `http://192.0.2.10:11434/api/tags`
+- Nexus-Ai: ping `192.0.2.10`
 
 Alerts go to a private Discord server and `#alerts`.
 
