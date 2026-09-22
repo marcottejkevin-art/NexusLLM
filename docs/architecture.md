@@ -8,7 +8,7 @@ NexusLLM is a dedicated local AI server integrated with an existing homelab mana
 
 ### Nexus-Ai
 
-- IP: `192.168.1.114`
+- IP: `192.0.2.10`
 - Dedicated AI server
 - Ollama
 - Open WebUI
@@ -18,7 +18,7 @@ NexusLLM is a dedicated local AI server integrated with an existing homelab mana
 
 ### Existing Homelab Mini PC
 
-- IP: `192.168.1.112`
+- IP: `192.0.2.20`
 - Existing Portainer
 - Uptime Kuma
 - Discord notification integration
@@ -27,11 +27,11 @@ NexusLLM is a dedicated local AI server integrated with an existing homelab mana
 
 ### Local
 
-`LAN client → 192.168.1.114:3000 → nexus-proxy → Open WebUI:8080`
+`LAN client → 192.0.2.10:3000 → nexus-proxy → Open WebUI:8080`
 
 ### Remote
 
-`iPhone → Tailscale → 100.117.255.81:3000 → nexus-proxy → Open WebUI:8080`
+`iPhone → Tailscale → 198.51.100.10:3000 → nexus-proxy → Open WebUI:8080`
 
 ### AI requests
 
@@ -43,11 +43,11 @@ NexusLLM is a dedicated local AI server integrated with an existing homelab mana
 
 ### Management
 
-`Portainer on 192.168.1.112 → Portainer Agent on 192.168.1.114:9001`
+`Portainer on 192.0.2.20 → Portainer Agent on 192.0.2.10:9001`
 
 ### Monitoring
 
-`Uptime Kuma on 192.168.1.112 → Nexus-Ai services`
+`Uptime Kuma on 192.0.2.20 → Nexus-Ai services`
 
 ## Design Goals
 
