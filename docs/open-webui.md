@@ -18,7 +18,7 @@ Ollama backend:
 
 External PWA manifest:
 
-`http://192.168.1.114:8081/manifest.webmanifest`
+`http://192.0.2.10:8081/manifest.webmanifest`
 
 A secret key is required through the environment. The real value is intentionally not stored in this repository.
 
