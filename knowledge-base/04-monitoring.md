@@ -1,14 +1,14 @@
 # Nexus Homelab — Monitoring
 
 Uptime Kuma:
-- Host: `192.168.1.112`
+- Host: `192.0.2.20`
 - Port: `3001`
-- URL: `http://192.168.1.112:3001`
+- URL: `the configured Uptime Kuma address`
 
 Monitors:
-- Open WebUI: `http://192.168.1.114:3000`
-- Ollama: `http://192.168.1.114:11434/api/tags`
-- Nexus-Ai: ping `192.168.1.114`
+- Open WebUI: `the configured Open WebUI endpoint`
+- Ollama: `the configured Ollama health endpoint`
+- Nexus-Ai: ping `192.0.2.10`
 
 Notifications use a private Discord server and `#alerts`.
 
@@ -24,6 +24,6 @@ Open WebUI troubleshooting:
 
 Portainer troubleshooting:
 1. Check portainer_agent.
-2. Verify TCP/9001 from 192.168.1.112.
+2. Verify TCP/9001 from 192.0.2.20.
 3. Check DOCKER-USER.
 4. Check portainer-firewall.service.
