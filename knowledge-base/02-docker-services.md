@@ -28,7 +28,7 @@ Volume: `open_webui_data`
 
 Ollama URL: `http://ollama:11434`
 
-External PWA manifest: `http://192.168.1.114:8081/manifest.webmanifest`
+External PWA manifest: `the configured PWA manifest endpoint`
 
 ## Nexus Proxy
 
