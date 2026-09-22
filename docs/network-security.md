@@ -4,17 +4,17 @@
 
 ### AI Server
 
-`192.168.1.114`
+`192.0.2.10`
 
 ### Existing Homelab Mini PC
 
-`192.168.1.112`
+`192.0.2.20`
 
 ### Tailscale
 
 AI server Tailscale IP:
 
-`100.117.255.81`
+`198.51.100.10`
 
 ## UFW
 
@@ -23,7 +23,7 @@ Desired policy:
 - Default incoming: deny
 - Default outgoing: allow
 - Default routed: deny
-- LAN `192.168.1.0/24`: allowed
+- LAN `192.0.2.0/24`: allowed
 - Tailscale interface `tailscale0`: allowed
 
 Useful command:
@@ -42,7 +42,7 @@ Current intended rules:
 
 ```text
 Allow established/related traffic
-Allow 192.168.1.112 → TCP/9001
+Allow 192.0.2.20 → TCP/9001
 Drop all other TCP/9001 traffic
 ```
 
